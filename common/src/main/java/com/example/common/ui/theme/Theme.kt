@@ -10,31 +10,40 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    background = colorBackgroundPrimary,
+    onBackground = colorBackgroundPrimary.copy(alpha = 0.5f),
+    primary = colorPrimaryContainer,
+    onPrimary = colorPrimaryContainer.copy(alpha = 0.5f),
+    secondary = colorSecondary,
+    onSecondary = colorSecondary.copy(alpha = 0.5f),
+    tertiary = colorText,
+    onTertiary = colorText.copy(alpha = 0.5f),
+    surface = Color.White.copy(alpha = 0.5f),
+    onSurface = Color.White.copy(alpha = 0.2f),
+    error = colorError,
+    onError = colorError.copy(alpha = 0.5f)
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    background = colorBackgroundPrimary,
+    onBackground = colorBackgroundPrimary.copy(alpha = 0.5f),
+    primary = colorPrimaryContainer,
+    onPrimary = colorPrimaryContainer.copy(alpha = 0.5f),
+    secondary = colorSecondary,
+    onSecondary = colorSecondary.copy(alpha = 0.5f),
+    tertiary = colorText,
+    onTertiary = colorText.copy(alpha = 0.5f),
+    surface = Color.White.copy(alpha = 0.5f),
+    onSurface = Color.White.copy(alpha = 0.2f),
+    error = colorError,
+    onError = colorError.copy(alpha = 0.5f)
 )
 
 @Composable
